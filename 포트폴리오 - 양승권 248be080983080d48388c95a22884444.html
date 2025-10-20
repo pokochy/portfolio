@@ -1,0 +1,731 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>포트폴리오 - 양승권</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(134, 131, 126, 1);
+	fill: rgba(134, 131, 126, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="248be080-9830-80d4-8388-c95a22884444" class="page sans"><header><h1 class="page-title">포트폴리오 - 양승권</h1><p class="page-description"></p></header><div class="page-body"><p id="28dbe080-9830-8014-a8a2-eb4b97d5c6e4" class="">
+</p><hr id="26abe080-9830-80fa-a5f7-c527a01d0a4d"/><div id="26abe080-9830-8002-b199-fad4b50c41d2" class="column-list"><div id="26abe080-9830-80fd-9349-f20c75c8b4c4" style="width:18.75%" class="column"><figure id="248be080-9830-803c-8a69-fb05bda67d49" class="image"><a href="KakaoTalk_20250808_012958549.jpg"><img style="width:192px" src="KakaoTalk_20250808_012958549.jpg"/></a></figure></div><div id="26abe080-9830-8099-8a97-e71f2d381a75" style="width:81.25%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="26abe080-9830-8086-8aa9-f3ebe2319c6e"><div style="width:100%"><h3 id="248be080-9830-8005-a45a-f788eb9e39b4" class="">연락처</h3><ul id="248be080-9830-80f6-bc82-c3660c22f079" class="bulleted-list"><li style="list-style-type:disc"><strong>phone : 010 - 2913 - 2409</strong></li></ul><ul id="248be080-9830-8024-9b12-ec516a329890" class="bulleted-list"><li style="list-style-type:disc"><strong>Mail : drdrgoodle1234@gmail.com</strong></li></ul><ul id="248be080-9830-80cf-adf2-c514bcf705c2" class="bulleted-list"><li style="list-style-type:disc"><strong>Blog : </strong><strong><a href="https://velog.io/@ihco/posts">https://velog.io/@ihco/posts</a></strong></li></ul></div></figure><p id="28abe080-9830-8021-b318-e05dd139de7d" class="">
+</p></div></div><hr id="248be080-9830-8059-b633-d253858768d0"/><div id="26abe080-9830-8021-8ad1-fb3ac3b1a7b3" class="column-list"><div id="26abe080-9830-806a-9c61-f7052a0834c2" style="width:43.749999999999986%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="26abe080-9830-8090-8ee9-cfd94e293b7a"><div style="width:100%"><p id="248be080-9830-8001-8bb8-c62a28e42372" class=""><strong>학력</strong><div class="indented"><p id="26abe080-9830-8047-ac72-d5a65f679c54" class=""><strong>2023 서울 대성고등학교 졸업</strong></p><p id="248be080-9830-806f-9017-efe2147a8333" class=""><strong>2024 중부대학교 정보보호학과 입학 </strong></p></div></p></div></figure></div><div id="288be080-9830-8013-87a9-e542b5473a00" style="width:56.24999999999998%" class="column"><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="288be080-9830-8077-b479-daa50157f4e9"><div style="width:100%"><p id="288be080-9830-8021-abb6-daa56d71ee86" class=""><strong>수상</strong><div class="indented"><ul id="288be080-9830-80b8-b755-f8100c97da0d" class="toggle"><li><details open=""><summary><strong>2025 </strong></summary><ul id="288be080-9830-80cd-b7ee-eb3098ee66bc" class="bulleted-list"><li style="list-style-type:disc"><strong>KITRI 화이트햇 스쿨 3기 우수 프로젝트 선정</strong></li></ul></details></li></ul></div></p></div></figure><p id="28bbe080-9830-8098-b3e3-d709982af1dd" class="">
+</p></div></div><hr id="248be080-9830-8054-ad18-fdee8f93515a"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="26abe080-9830-80e2-a42f-cd95df3dd0a2"><div style="width:100%"><h3 id="248be080-9830-8043-85f7-e42f8883fd23" class="">교내 활동</h3><hr id="26abe080-9830-802e-bc8c-e9686964c8b9"/><ul id="28bbe080-9830-80d1-8f9b-dd64fdf991da" class="toggle"><li><details open=""><summary><strong>2024 이전</strong></summary><ul id="248be080-9830-80e5-9b2d-c883aad6b70b" class="toggle"><li><details open=""><summary><mark class="highlight-default"><strong>대성고등학교 프로그래밍 동아리 ‘셈틀을 괴다’ 활동 (2022)</strong></mark></summary><figure class="block-color-brown_background callout" style="white-space:pre-wrap;display:flex" id="26abe080-9830-8099-912e-e9f20d091e66"><div style="width:100%"><ul id="248be080-9830-8008-82b0-ee04480f69a0" class="bulleted-list"><li style="list-style-type:disc">C언어, python 기초 코드 학습</li></ul><ul id="248be080-9830-8046-8d1a-ec140cdd9812" class="bulleted-list"><li style="list-style-type:disc">모둠별 자유주제 프로그래밍 실습 <ul id="288be080-9830-809f-aaef-f79affb5af04" class="bulleted-list"><li style="list-style-type:circle">tit-for-tat 알고리즘 구현 등</li></ul></li></ul></div></figure></details></li></ul><ul id="248be080-9830-80ed-a248-e3a657377207" class="toggle"><li><details open=""><summary><strong>중부대학교 코드 학습 스터디 ‘Hello world’ 운영 (2024)</strong></summary><figure class="block-color-brown_background callout" style="white-space:pre-wrap;display:flex" id="26abe080-9830-8046-ac70-f3602809103d"><div style="width:100%"><ul id="248be080-9830-8076-91f8-d336571142a2" class="bulleted-list"><li style="list-style-type:disc">C언어, 정보보호학개론 스터디 진행<ul id="248be080-9830-8059-a8c3-c1d1ecc60bca" class="bulleted-list"><li style="list-style-type:circle">매주 개인별 학습 내용 발표 세미나 진행</li></ul><ul id="24bbe080-9830-80a4-bd4a-f688984f1429" class="bulleted-list"><li style="list-style-type:circle">스터디원 4인 진도 관리 및 과제 배부</li></ul></li></ul><ul id="248be080-9830-8082-9835-d911d435bae3" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default"><mark class="highlight-default_background"><strong>C언어 서버사이드 소켓 구현 프로젝트 진행 (2024)</strong></mark></mark></li></ul></div></figure></details></li></ul></details></li></ul><hr id="26abe080-9830-80fe-a453-d1ffd8bf3d07"/><ul id="28bbe080-9830-803a-8dfb-ff0a3837f588" class="toggle"><li><details open=""><summary><strong>2025</strong></summary><ul id="248be080-9830-803d-b0e3-e19ddd7bf197" class="toggle"><li><details open=""><summary><strong>중부대학교 정보보안 동아리 ‘S.C.P ‘활동 (2025~)</strong></summary><figure class="block-color-brown_background callout" style="white-space:pre-wrap;display:flex" id="26abe080-9830-80af-8c6a-ca25c75d4e6f"><div style="width:100%"><ul id="248be080-9830-804f-bedd-dba12943d2b6" class="bulleted-list"><li style="list-style-type:disc">매주 개인별 학습 내용 세미나 진행</li></ul><ul id="288be080-9830-804a-b276-ff27f3376e45" class="bulleted-list"><li style="list-style-type:disc"><strong>시스템 해킹 스터디 ‘Hack.in’ 활동</strong><ul id="288be080-9830-80d2-b381-ed53127c91f0" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-default"><mark class="highlight-default_background"><strong>포너블 워게임 사이트 제작 프로젝트 진행 (2025)</strong></mark></mark></li></ul><ul id="28dbe080-9830-801f-b361-fffbc8dfd099" class="bulleted-list"><li style="list-style-type:circle">시스템 해킹 학습 및 1day 분석 스터디 진행</li></ul></li></ul></div></figure></details></li></ul><ul id="28abe080-9830-80f1-9036-ef0f7480ae1b" class="toggle"><li><details open=""><summary><strong>선박 보안 공모전 팀 ‘바다이야기 ‘운영</strong></summary><figure class="block-color-brown_background callout" style="white-space:pre-wrap;display:flex" id="28abe080-9830-800d-8dc6-efb6e1b12f74"><div style="width:100%"><ul id="28abe080-9830-8017-b7ac-f3869e7da398" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default"><strong>KISIA 정보보호 정책제안 공모전 참가</strong></mark><ul id="28abe080-9830-8024-81e9-efe4d5f64c71" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-default">주제 : 선박 소프트웨어 보안 사전 인증 정책</mark></li></ul></li></ul><ul id="28abe080-9830-809f-a160-d1e490f9106f" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default"><strong>한국조선해양플랜트협회 K-조선 해커톤 참가</strong></mark><ul id="28abe080-9830-80cb-8e69-e2e9d4f7d4b4" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-default">주제 :  AI 기반 해상 통신 이상 흐름 탐지 시스템</mark></li></ul></li></ul><ul id="28abe080-9830-80bd-b8a5-d8deb56cc8a8" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default"><strong>한국정보보호학회 2025 동계학술대회 논문 투고</strong></mark><ul id="28abe080-9830-80d4-9af0-e9a890fd8123" class="bulleted-list"><li style="list-style-type:circle"><mark class="highlight-default">주제 : 해상 네트워크에서의 IDS 적용 가능성 연구:<br/>ICS/SCADA 환경과의 비교 분석</mark></li></ul></li></ul></div></figure></details></li></ul></details></li></ul><hr id="28abe080-9830-8089-ad16-e26ffb54da31"/></div></figure><hr id="28bbe080-9830-802e-bff0-e9eb0d68cc4c"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="26abe080-9830-8038-8a22-f5f701b9d498"><div style="width:100%"><h3 id="248be080-9830-80a9-8cd7-e5833347646f" class=""><strong>대외활동</strong></h3><hr id="28bbe080-9830-8072-b9d7-d8c1c84cec31"/><ul id="288be080-9830-80f9-8d9c-d90c281e4cca" class="toggle"><li><details open=""><summary><strong>2025</strong></summary><ul id="26abe080-9830-8076-bcf9-ee66cbb01eb4" class="toggle"><li><details open=""><summary><strong>KITRI 화이트햇 스쿨 3기 수료</strong></summary><ul id="248be080-9830-80a1-b433-ce218f918058" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default"><mark class="highlight-default_background">선박 기자재 소프트웨어 취약점 분석 프로젝트 진행</mark></mark><ul id="28dbe080-9830-8094-ad61-f929778155cb" class="bulleted-list"><li style="list-style-type:circle">우수 프로젝트 선정 (Team Seabugs)</li></ul></li></ul></details></li></ul></details></li></ul><hr id="28bbe080-9830-80d3-9138-ff524be5c297"/></div></figure><hr id="248be080-9830-803c-a5c5-e584505e0403"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="26abe080-9830-8066-a871-c4748912e744"><div style="width:100%"><h3 id="248be080-9830-803c-a930-d24e8168c0df" class="">프로젝트</h3><hr id="26abe080-9830-803b-8bad-f600469bb565"/><ul id="28bbe080-9830-8009-87c0-f5c1a9aa196c" class="toggle"><li><details open=""><summary><strong>2024</strong></summary><ul id="248be080-9830-8012-8bb5-cc663a778bbd" class="toggle"><li><details open=""><summary><strong>C언어 서버사이드 소켓 구현 (pm)</strong></summary><p id="28abe080-9830-80c6-ae3c-fde8a9f0de1f" class="">
+</p><ul id="248be080-9830-8065-9e28-c6443986ea6d" class="bulleted-list"><li style="list-style-type:disc"><strong>목적. </strong>정보보안의 기초인 네트워크와 프로그래밍 언어의 이해를 높이고자 함</li></ul><p id="24abe080-9830-8077-82d6-d0040cb1fa42" class="">
+</p><p id="248be080-9830-80d2-a57d-cdae5c398f0c" class=""><strong>주요 활동 내용 </strong><div class="indented"><ul id="249be080-9830-80dd-8f6a-f46e9c344728" class="bulleted-list"><li style="list-style-type:disc">4주간 주 2회 오프라인 회의</li></ul><ul id="249be080-9830-8027-b628-d85c434dd319" class="bulleted-list"><li style="list-style-type:disc">세미나 형식으로 레퍼런스 코드 분석 및 학습목표 설정</li></ul><ul id="249be080-9830-80d8-9ab0-fa029cf71ae1" class="bulleted-list"><li style="list-style-type:disc">학습내용 기반 코드 보완</li></ul><p id="26abe080-9830-80a4-be56-fa68d254b6d0" class="">
+</p></div></p><ul id="288be080-9830-80df-9ff5-d4733a38d5da" class="bulleted-list"><li style="list-style-type:disc"><strong>세부 설명</strong><figure class="block-color-brown_background callout" style="white-space:pre-wrap;display:flex" id="24abe080-9830-8086-a2fc-f68b1ac76104"><div style="width:100%"><blockquote id="249be080-9830-8013-b47a-f1ab9b83b0cf" class="block-color-brown_background"><mark class="highlight-gray">24년 1학년 여름방학, 학과 내 동기 1명과 4주간 함께 수행한 프로젝트입니다.<br/> 프로그래밍 언어와 네트워크에 대한 이해도를 높이고자 C언어로 서버사이드 소켓 프로그램을 구현하는걸 목표로 진행했습니다. <br/>자료 탐색, 코드 분석, 코드 작성과 같은 전반적 작업에 모두 참여하였습니다.</mark></blockquote></div></figure></li></ul><p id="24abe080-9830-80da-90b1-c4b36f555349" class="">
+</p><ul id="248be080-9830-80f0-a8d9-e129b11935b1" class="bulleted-list"><li style="list-style-type:disc"><strong>성과 : 구현한 소켓 프로그램을 통해 TCP 기반 HTTP통신으로 웹페이지 출력 성공</strong></li></ul><hr id="28bbe080-9830-8057-a280-c450a2223a2b"/><p id="249be080-9830-8051-af86-cf514a0ae756" class="">
+</p></details></li></ul></details></li></ul><hr id="26abe080-9830-80b9-a51a-c6dc79d95563"/><ul id="28bbe080-9830-8017-9c5f-f2a13d5b3578" class="toggle"><li><details open=""><summary><strong>2025</strong></summary><ul id="248be080-9830-80c3-b34a-ea168939b2ae" class="toggle"><li><details open=""><summary><strong>선박 기자재 소프트웨어 취약점 분석 </strong></summary><p id="28abe080-9830-80b9-b0e0-f520acb48953" class="">
+</p><ul id="248be080-9830-80fb-a076-fa7765fc2843" class="bulleted-list"><li style="list-style-type:disc"><strong>목적. </strong>선박 산업계의 IP 기반 통신 도입에 따른 위험성 증대에 대해 선제적 보안분석 및 연구를 통해 산업에 기여<br/></li></ul><p id="248be080-9830-80dc-83e8-ef9427758871" class=""><strong>주요 활동 내용</strong><div class="indented"><ul id="249be080-9830-80b2-a7d7-c412486cf243" class="bulleted-list"><li style="list-style-type:disc">선박 내 전자기기 제원 및 통신규약 조사</li></ul><ul id="249be080-9830-8019-9ecf-eece20389c9e" class="bulleted-list"><li style="list-style-type:disc">ECDIS 프로그램 오픈소스 1종 , 상용 소프트웨어 3종 취약점 분석<ul id="28dbe080-9830-8086-ac02-cf685db45c82" class="bulleted-list"><li style="list-style-type:circle">opencpn, Navi sailor3000/4000, Orca G2 </li></ul></li></ul><ul id="248be080-9830-8090-82be-f45ea0651721" class="bulleted-list"><li style="list-style-type:disc">실제 선박 NMEA 프로토콜 신호 수신 테스트베드 구축</li></ul><ul id="248be080-9830-800a-be93-ce3d93171bac" class="bulleted-list"><li style="list-style-type:disc">구축 테스트베드 및 발견 취약점 기반 시나리오 작성</li></ul><ul id="248be080-9830-8061-b06f-f75a396648c7" class="bulleted-list"><li style="list-style-type:disc">시나리오 기반 논문 작성 및 발표<ul id="24bbe080-9830-80b7-8f6d-e1f4a07aceb4" class="bulleted-list"><li style="list-style-type:circle">한국정보보호학회 (하계학술대회 2건/영남지부 학술대회/WISA2025 2건)</li></ul></li></ul><ul id="248be080-9830-8016-a7f8-de9ee4134371" class="bulleted-list"><li style="list-style-type:disc">동남 정보보호 클러스터, 부산항 vts, 해양대학교 실습선 등 12개 기관/시설 견학</li></ul><ul id="248be080-9830-8033-8c8a-dc95d10993e8" class="bulleted-list"><li style="list-style-type:disc">한국 선급 연구원, 전/현직 1등 항해사 및 기타 관계자와의 정보교류 및 시나리오 검증 </li></ul><ul id="24abe080-9830-8094-a240-cee46ce13489" class="bulleted-list"><li style="list-style-type:disc">연구내용 기반 Blackhat 2025 EU CFP 작성</li></ul><p id="288be080-9830-80d3-be1e-ddd31fd3cbfc" class="">
+</p><ul id="288be080-9830-8030-9a7e-d4bcb09b0d76" class="bulleted-list"><li style="list-style-type:disc"><strong>세부 설명</strong><figure class="block-color-brown_background callout" style="white-space:pre-wrap;display:flex" id="24abe080-9830-8038-b159-cfb60897cef8"><div style="width:100%"><blockquote id="24abe080-9830-80d5-9d98-dfd4490fbbdb" class="block-color-brown_background"><mark class="highlight-gray">25년 화이트햇 스쿨 교육 중, 팀원 7명과 함께 수행한 프로젝트입니다. <br/>선박에 사용되는 소프트웨어 중 Windows 환경의 ECDIS에 사용되는 소프트웨어를 분석하였습니다. <br/>해도(ENC) 분석, 실제 신호 기반 테스트베드 구현, 관련 시나리오 작성, 논문 작성 등을 담당하였으며, <br/>작성한 논문의 경우, 직접 발표를 담당했습니다.</mark></blockquote></div></figure></li></ul></div></p><p id="24abe080-9830-803a-a982-df639e4bca06" class="">
+</p><ul id="248be080-9830-8037-9eb2-ecb8f0f3a7d9" class="bulleted-list"><li style="list-style-type:disc"><strong>성과물 : 논문 5건 통과 및 발표, 발견 취약점 6건 ZDI/MITRE 제보</strong><div id="28abe080-9830-80cf-8af1-cdb805585594" class="column-list"><div id="28abe080-9830-801c-b2f0-e466af949e69" style="width:31.25%" class="column"><figure class="block-color-brown_background callout" style="white-space:pre-wrap;display:flex" id="28abe080-9830-807d-9c29-d882b5f4c656"><div style="width:100%"><p id="28abe080-9830-809d-a2b4-c199c9c570ca" class=""><strong>취약점</strong></p><ul id="279be080-9830-80ab-9764-f2d1e37bf2f3" class="bulleted-list"><li style="list-style-type:disc">CVE-2025-56810</li></ul><ul id="279be080-9830-804e-966d-e4ad0e2478dd" class="bulleted-list"><li style="list-style-type:disc">CVE-2025-56812</li></ul><ul id="279be080-9830-80f2-b639-ce2e30ef173f" class="bulleted-list"><li style="list-style-type:disc">CVE-2025-56813</li></ul><ul id="279be080-9830-8038-ac13-c0b790a918c8" class="bulleted-list"><li style="list-style-type:disc">CVE-2025-56814</li></ul></div></figure></div><div id="28abe080-9830-80e3-aaa6-c5a4f5e81fa9" style="width:68.75%" class="column"><figure class="block-color-brown_background callout" style="white-space:pre-wrap;display:flex" id="28abe080-9830-8002-9fc4-ee515b7731c6"><div style="width:100%"><p id="28abe080-9830-8047-afb9-ca42f2caabb2" class=""><strong>논문</strong></p><ol type="1" id="28abe080-9830-80e2-8099-ee1ce7b91c1d" class="numbered-list" start="1"><li>ECDIS 차트 삭제 업데이트의 오용 가능성과 절차적 대응 방안 연구<br/>(한국정보보호학회 영남지부 학술대회, 2025.06.13)</li></ol><ol type="1" id="28abe080-9830-802f-8066-e020b01ee7af" class="numbered-list" start="2"><li>S-100 표준 적용에 따른 ECDIS GPS 신호 조작 위협 시나리오 분석: STRIDE<br/>모델기반 접근 (한국정보보호학회 하계학술대회, 2025.06.24)</li></ol><ol type="1" id="28abe080-9830-80f1-8fef-f756804a3899" class="numbered-list" start="3"><li>S-100 표준 적용에 따른 ECDIS의 IP 인터페이스 사이버 위협 평가 방법론<br/>연구 (한국정보보호학회 하계학술대회, 2025.06.24)</li></ol><ol type="1" id="28abe080-9830-8005-aeca-f87189ee79be" class="numbered-list" start="4"><li>Visual Tampering in S-52: Threats and Protections<br/>(WISA 2025, 2025.08.21)</li></ol><ol type="1" id="28abe080-9830-8013-8c68-f0b31f730230" class="numbered-list" start="5"><li>NMEA Under Siege: Dynamic Flooding Attacks and Defenses <br/>(WISA 2025, 2025.08.21)</li></ol><p id="28abe080-9830-80be-8174-fe9a57c9f129" class="">
+</p></div></figure></div></div></li></ul><ul id="279be080-9830-8067-9722-eaee0f4a2973" class="bulleted-list"><li style="list-style-type:disc"><strong>화이트햇 스쿨 3기 우수프로젝트 선정 및 수상</strong></li></ul><p id="28dbe080-9830-800a-be4b-f059f21233fe" class="">
+</p><hr id="28bbe080-9830-80f9-b41b-de3bb8072613"/><p id="288be080-9830-803c-a851-f4f96aff4dd1" class="">
+</p></details></li></ul><ul id="24bbe080-9830-80a7-87df-dfdbf2a9dd28" class="toggle"><li><details open=""><summary><strong>포너블 워게임 아카이브 제작 </strong></summary><p id="28abe080-9830-8066-b8ee-e630f15c2a55" class="">
+</p><ul id="24bbe080-9830-8098-9cd7-fc60ea1ef21b" class="bulleted-list"><li style="list-style-type:disc"><strong>목적.</strong> 문제 제작자(방어자)의 관점에서 시스템 해킹 기술을 바라보며 시스템 해킹에 대한 이해를 높이고 이를 워게임 아카이브 제작을 통해 다양한 사람들과 공유하고자 함. </li></ul><p id="24bbe080-9830-8027-8341-f6a8470a9a92" class="">
+</p><p id="24bbe080-9830-809e-8c3b-d538d0cc9f1f" class=""><strong>주요 활동 내용</strong><div class="indented"><ul id="24bbe080-9830-80cb-be52-f75a887eb417" class="bulleted-list"><li style="list-style-type:disc">기존 워게임 풀이 및 출제 관점분석</li></ul><ul id="24bbe080-9830-80f7-8b08-c2cb04ab542c" class="bulleted-list"><li style="list-style-type:disc">라이트업 리뷰 세미나 진행 </li></ul><ul id="24bbe080-9830-8077-a8b8-c50a2c0a6ff1" class="bulleted-list"><li style="list-style-type:disc">워게임 제작 및 상호간 풀이 진행</li></ul><ul id="25abe080-9830-8043-925c-dee475f0ac11" class="bulleted-list"><li style="list-style-type:disc">ctfd 이용해 AWS에 워게임 아카이빙</li></ul><ul id="25ebe080-9830-80c2-9c80-d6ed747ad4ca" class="bulleted-list"><li style="list-style-type:disc">유지 보수, 선/후배간 지식 교류 유지</li></ul><p id="24bbe080-9830-8038-914f-cc4b68360219" class="">
+</p></div></p><ul id="288be080-9830-804c-8596-df0c6f6ca4a7" class="bulleted-list"><li style="list-style-type:disc"><strong>세부 정보</strong><figure class="block-color-brown_background callout" style="white-space:pre-wrap;display:flex" id="24bbe080-9830-8019-8eaa-f1e9be1baba2"><div style="width:100%"><blockquote id="24bbe080-9830-8002-99f4-fc495420eec3" class=""><mark class="highlight-gray">25년 여름방학, 학과 내 동아리에서 동아리원 6명과 함께 8주간 수행한 프로젝트 입니다. <br/>추후 시스템 해킹에 입문하고자 하는 후배들을 위해 스택 익스플로잇 위주의 워게임들을 만들고, <br/>AWS를 사용하여 동아리 내에 ctfd 서버를 구축하였습니다.</mark></blockquote></div></figure></li></ul><p id="24bbe080-9830-8082-b9ef-cf283a3a39d7" class="">
+</p><ul id="24bbe080-9830-80a6-89bd-e7bb12d07a05" class="bulleted-list"><li style="list-style-type:disc"><strong>성과물 : 워게임 총 30문제 제작 , ctfd 서버 구축</strong></li></ul><p id="28dbe080-9830-80c4-85a4-e6d3b503fc06" class="">
+</p><hr id="28bbe080-9830-80d2-83b5-e791270b2c05"/><p id="24bbe080-9830-805e-ac89-f3fa26d11862" class="">
+</p></details></li></ul></details></li></ul><hr id="26abe080-9830-80a2-a509-f49b2460142c"/></div></figure><hr id="248be080-9830-8051-a30e-d8170f0e5143"/><figure class="block-color-gray_background callout" style="white-space:pre-wrap;display:flex" id="26abe080-9830-8096-b26d-f84bdc6b7ab3"><div style="width:100%"><h3 id="248be080-9830-80aa-9566-d35f10c50a9b" class="">논문</h3><hr id="26abe080-9830-8019-b19e-cbdb834ab2cc"/><ul id="248be080-9830-8032-963d-c1eee0b93583" class="toggle"><li><details open=""><summary><strong>2025</strong></summary><ul id="248be080-9830-80d5-a21a-f656be8a5f37" class="toggle"><li><details open=""><summary>한국정보보호학회 WISA 2025 포스터 논문 발표 - NMEA Under Siege: Dynamic Flooding Attacks and Defenses <br/>(WISA 2025, 2025.08.21)</summary><figure class="block-color-brown_background callout" style="white-space:pre-wrap;display:flex" id="24abe080-9830-80fa-bdf5-e64861c8f157"><div style="width:100%"><blockquote id="24abe080-9830-80c9-bec7-dd174d26cfb4" class="block-color-gray"><mark class="highlight-gray">NMEA 프로토콜은 인증, 암호화, 무결성 검증이 없어 플러딩 공격에 취약하고, <br/>기존 연구는 구조적 문제에 집중했으나, 구체적인 시나리오 연구가 부족함을 설명. <br/>이에 ECDIS에서 플러딩 공격 시뮬레이션을 통해 인식 교란 가능성을 확인하고, <br/>이를 막기 위해 화이트리스트 필터링, 시각적 억제, 이상 탐지 같은 대책을 제안함.</mark></blockquote></div></figure></details></li></ul><p id="249be080-9830-8042-b323-f69685fbf941" class="">
+</p><ul id="248be080-9830-808c-aea7-ee1987a6421c" class="toggle"><li><details open=""><summary><strong>외 참여 논문 4종</strong></summary><ol type="1" id="24abe080-9830-8087-b823-d65583e89389" class="numbered-list" start="1"><li>ECDIS 차트 삭제 업데이트의 오용 가능성과 절차적 대응 방안 연구<br/>(한국정보보호학회 영남지부 학술대회, 2025.06.13)</li></ol><ol type="1" id="24abe080-9830-80a7-843b-d4aa8a0db925" class="numbered-list" start="2"><li>S-100 표준 적용에 따른 ECDIS GPS 신호 조작 위협 시나리오 분석: STRIDE<br/>모델기반 접근 (한국정보보호학회 하계학술대회, 2025.06.24)</li></ol><ol type="1" id="24abe080-9830-806b-ac8d-f7ef20daa0b6" class="numbered-list" start="3"><li>S-100 표준 적용에 따른 ECDIS의 IP 인터페이스 사이버 위협 평가 방법론<br/>연구 (한국정보보호학회 하계학술대회, 2025.06.24)</li></ol><ol type="1" id="24abe080-9830-804d-a269-ca0dc95e1a25" class="numbered-list" start="4"><li>Visual Tampering in S-52: Threats and Protections<br/>(한국정보보호학회 WISA 2025, 2025.08.21)</li></ol></details></li></ul><p id="24abe080-9830-8023-96e1-f537304d31de" class="">
+</p></details></li></ul><hr id="26abe080-9830-80ec-8cca-d7fb08a2c7da"/></div></figure><hr id="248be080-9830-80da-ae4d-fd6ccc499595"/><p id="24abe080-9830-8082-b0e5-e018dab496b8" class="">
+</p><p id="26abe080-9830-8023-a6da-daab20e7da53" class="">
+</p><p id="26abe080-9830-8006-9b3a-f5284370ff12" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
